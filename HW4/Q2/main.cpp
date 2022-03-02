@@ -73,14 +73,14 @@ int main() {
         cout << "19020483547682 is in the book list, and at position " << position << "." << endl;
     }
 
-    cout << bookList.size() << endl; // Second Method
-    cout << bookList.empty() << endl; // Third Method
+    cout << "The size of the book is: " << bookList.size() << endl; // Second Method
+    cout << "If we empty the book, the size is: " <<bookList.empty() << endl; // Third Method
     bookList.pop_back(); // Fourth Method
-    cout << bookList.size() << endl;
+    cout << "Delete one element of the size, the size is: " << bookList.size() << endl;
 
-    bookList.clear();
+    bookList.clear();// Fifth Method
     cout << bookList.size() << endl;
-    cout << bookList.empty() << endl; // Fifth Method
+    cout << bookList.empty() << endl;
     return 0;
 }
 
