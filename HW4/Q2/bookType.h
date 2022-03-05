@@ -17,6 +17,8 @@ public:
     bookType(string t, string a1, string a2, string a3, string a4, string p,
              string i, double pr, int nc, int na); //default constructor with all parameters
 
+    bookType(const char string[4]);
+
     void print(); //prints the data of a bookType
 
     void showTitle(); //prints the title

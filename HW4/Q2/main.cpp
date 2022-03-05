@@ -40,7 +40,11 @@ int main() {
     //adding the books to the vector:
     bookList.push_back(book1); //First Method
     bookList.push_back(book2);
-    bookList.push_back(book3);
+
+    // adding book3 after book1
+    vector<bookType>::iterator it = bookList.begin() + 1;
+    bookList.insert( it, book3); // Second method
+
 
     //printing each bookType in the vector:
     cout << "Printing All Of The Books In The Book List..." << endl;
@@ -73,14 +77,20 @@ int main() {
         cout << "19020483547682 is in the book list, and at position " << position << "." << endl;
     }
 
-    cout << "The size of the book is: " << bookList.size() << endl; // Second Method
-    cout << "If we empty the book, the size is: " <<bookList.empty() << endl; // Third Method
-    bookList.pop_back(); // Fourth Method
-    cout << "Delete one element of the size, the size is: " << bookList.size() << endl;
+    cout << "The size of the book list is: " << bookList.size() << endl; // third Method
 
-    bookList.clear();// Fifth Method
-    cout << bookList.size() << endl;
-    cout << bookList.empty() << endl;
+    cout << "-----------" << endl;
+
+    if (bookList.empty()) // Fourth Method
+        cout << "The book list is empty\n";
+    else
+        cout << "The book list is not empty\n";
+    bookList.pop_back(); // Fifth Method
+    cout << "Printing All Of The Books In The Book List now..." << endl;
+    for (int i = 0; i < bookList.size(); i++) { //steps through each bookType in the bookList
+        cout << endl;
+        bookList[i].print(); //prints the bookType and its data
+    }
     return 0;
 }
 
