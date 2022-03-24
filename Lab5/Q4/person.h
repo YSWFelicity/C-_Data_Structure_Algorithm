@@ -1,21 +1,54 @@
 //
-// Created by Yingshu Wang on 3/21/22.
+// Created by Yingshu Wang on 3/24/22.
 //
 
 #ifndef Q4_PERSON_H
 #define Q4_PERSON_H
 
+#include <iostream>
 #include <string>
+
 using namespace std;
 
-class Person {
-public:
-    Person(string n, Birthday b);
-    void printInfo();
+class person
+{
+    friend ostream& operator << (ostream&, const person&);
+    friend istream& operator >> (istream&, person&);
 
-private:
-    string name;
-    Birthday bd;
+public:
+    // default constructor: must have the same name as the file
+    person();
+
+    // specific constructor
+    person(string fn, string mn, string ln);
+
+    // setters
+    void setFirstName(string fn);
+    void setMiddleName(string mn);
+    void setLastName(string ln);
+    void setName(string fn, string mn, string ln);
+
+    //getters
+    string getFirstName() const;
+    string getMiddleName() const;
+    string getLastName() const;
+
+    // printf
+    void print() const;
+
+    // Overloading operators
+    bool operator<(const person& otherPerson) const;
+    bool operator>(const person& otherPerson) const;
+    bool operator==(const person& otherPerson) const;
+    bool operator<=(const person& otherPerson) const;
+    bool operator>=(const person& otherPerson) const;
+    bool operator!=(const person& otherPerson) const;
+
+protected: // change from private to protected so that studentType can access these
+
+    string firstName; // data members
+    string middleName;
+    string lastName;
 };
 
 #endif //Q4_PERSON_H

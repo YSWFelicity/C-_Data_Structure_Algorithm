@@ -1,49 +1,35 @@
 #include <iostream>
+#include <set>
+
 using namespace std;
 
-#define aaaMAX 100
+struct classcomp {
+  bool operator() (const int& lhs, const int& rhs) const
+  {return lhs>rhs;}
+};
 
-int main()
-{
+int main() {
+    // Setup a standard set
 
- int aaaarr[aaaMAX];
- int aaan,aaai,aaaj;
- int aaatemp;
- 
- cout<<"Total number ";
- cin>>aaan;
+    set<int> a;
 
- 
- for(aaai=0;aaai<aaan;aaai++)
- {
-  cout<<"Enter element ["<<aaai+1<<"] ";
-  cin>>aaaarr[aaai];
- }
+    a.insert(5);
+    a.insert(1);
+    a.insert(6);
+    a.insert(3);
+    a.insert(7);
+    a.insert(2);
 
- cout<<"Unsorted Array elements:"<<endl;
- for(aaai=0;aaai<aaan;aaai++)
-  cout<<aaaarr[aaai]<<"\t";
- cout<<endl;
 
- for(aaai=0;aaai<aaan;aaai++)
- {  
-  for(aaaj=aaai+1;aaaj<aaan;aaaj++)
-  {
-   if(aaaarr[aaai]>aaaarr[aaaj])
-   {
-    aaatemp  =aaaarr[aaai];
-    aaaarr[aaai]=aaaarr[aaaj];
-    aaaarr[aaaj]=aaatemp;
-   }
-  }
- }
 
- cout<<"Sorted Elements:"<<endl;
- for(aaai=0;aaai<aaan;aaai++)
-  cout<<aaaarr[aaai]<<"\t";
- cout<<endl; 
- 
- 
- return 0;
- 
+    set<int>::iterator it;
+
+    for ( it=a.begin(); it != a.end(); it++ )
+
+        cout << " " << *it;
+
+    cout << endl << endl;
+
+    return 0;
+
 }
