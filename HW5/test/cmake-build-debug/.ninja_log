@@ -1,9 +1,0 @@
-# ninja log v5
-0	210	1648077813766403895	CMakeFiles/test.dir/CustomerData.cpp.o	12bbd52c3e06eef2
-0	211	1648077813767443774	CMakeFiles/test.dir/PersonData.cpp.o	5a75cd476ba7b10f
-0	270	1648077813826297576	CMakeFiles/test.dir/main.cpp.o	55527b9e6e755250
-270	300	1648077813857885944	test	ff51653fe6bc4fde
-1	291	1648080790896715291	CMakeFiles/test.dir/PersonData.cpp.o	5a75cd476ba7b10f
-1	291	1648080790896499081	CMakeFiles/test.dir/CustomerData.cpp.o	12bbd52c3e06eef2
-0	221	1648080939027946554	CMakeFiles/test.dir/main.cpp.o	55527b9e6e755250
-222	259	1648080939066528064	test	ff51653fe6bc4fde
