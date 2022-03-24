@@ -1,0 +1,10 @@
+# ninja log v5
+0	347	1648160815934273860	CMakeFiles/Birthday.dir/main.cpp.o	b67cd5945450fd7a
+1	348	1648160815934273693	CMakeFiles/Birthday.dir/birthday.cpp.o	767c1685405d90f7
+1	350	1648160815938354599	CMakeFiles/Birthday.dir/person.cpp.o	e258ec87747a8a4b
+3	279	1648161026586923399	CMakeFiles/Birthday.dir/main.cpp.o	b67cd5945450fd7a
+279	317	1648161026627014281	Birthday	9f505d7dfeb3d9de
+1	281	1648161106759194844	CMakeFiles/Birthday.dir/main.cpp.o	b67cd5945450fd7a
+281	313	1648161106792604175	Birthday	9f505d7dfeb3d9de
+1	267	1648161136492373671	CMakeFiles/Birthday.dir/main.cpp.o	b67cd5945450fd7a
+267	297	1648161136523891822	Birthday	9f505d7dfeb3d9de
