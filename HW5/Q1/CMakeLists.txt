@@ -3,4 +3,4 @@ project(Q1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Q1 main.cpp date.cpp date.h personType.cpp personType.h)
+add_executable(Q1 main.cpp Person.cpp Person.h address.cpp address.h)

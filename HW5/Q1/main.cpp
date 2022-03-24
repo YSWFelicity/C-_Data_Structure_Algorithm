@@ -1,47 +1,52 @@
-// Main Test for creating an address book (map)
-
 #include <iostream>
-#include <string>
-#include <map>
+#include "Address.h"
 
-#include "personType.h"
-#include "date.h"
+// Function to display the information of person
+void DisplayPerson(Address c)
+{
+    string result;
 
-using namespace std;
+    // Display all information of the person
+    cout << "-----------" << endl
+         << "First Name: " << c.getfirstName() << endl
+         << "Middle Name: " << c.getmiddleName() << endl
+         << "Last Name: " << c.getlastName() << endl
+         << "Street: " << c.getStreet() << endl
+         << "City: " << c.getCity() << endl
+         << "Country: " << c.getCountry() << endl
+         << "Block: " << c.getBlock() << endl
+         << "Unit: " << c.getUnit() << endl
+         << "Floor: " << c.getFloor() << endl
+         << "postalCode: " << c.getPostalCode() << endl;
+}
 
 int main()
 {
-    // Declaring a map object
-    map<personType, date> myMap;
+    // Create the first instance of person
+    Address person1;
 
-    // Creating instances of personType
-    personType p1("Htet", "Htet", "Win");
-    personType p2("Ang", "Wan", "Xin");
-    personType p3("A", "B", "C");
-    personType p4("D", "E", "F");
+    // Add information to person1
+    person1.setfirstName("Joan");
+    person1.setmiddleName("Smith");
+    person1.setlastName("Hank");
+    person1.setStreet("123 Main Street");
+    person1.setCity("Seattle");
+    person1.setCountry("the US");
+    person1.setBlock(45);
+    person1.setUnit(110);
+    person1.setFloor(2);
+    person1.setPostalCode(12345);
 
-    // Creating instances of date
-    date d1(1, 2, 14);
-    date d2(2, 12, 8);
-    date d3(3, 10, 12);
-    date d4(4, 1, 9);
+    // Display the information of person 1
+    cout << "Person #1" << endl;
+    DisplayPerson(person1); // Call function DisplayPerson
 
-    // Inserting values into map called myMap
-    myMap.insert(pair<personType, date>(p1, d1));
-    myMap.insert(pair<personType, date>(p2, d2));
-    myMap.insert(pair<personType, date>(p3, d3));
-    myMap.insert(pair<personType, date>(p4, d4));
+    // Create the second instance of Person and add information to it
+    Address person2("Jones", "Jenny", "Wang", "555 East Street", "Portland", "the US", 88, 36, 5, 654321);
 
-    // Defining an iterator called "it"
-    map<personType, date>::iterator it;
-
-    // Displaying the map
-    for (it = myMap.begin(); it != myMap.end(); ++it)
-    {
-        cout << it->first<< ": "
-             << it->second << '\n';
-    }
-
+    // Display the information of person 2
+    cout << "Person #2" << endl;
+    DisplayPerson(person2); // Call function DisplayPerson
 
     return 0;
 }

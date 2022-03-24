@@ -78,14 +78,14 @@ build CMakeFiles/Q1.dir/main.cpp.o: CXX_COMPILER__Q1_Debug /Users/yingshuwang/De
   OBJECT_DIR = CMakeFiles/Q1.dir
   OBJECT_FILE_DIR = CMakeFiles/Q1.dir
 
-build CMakeFiles/Q1.dir/date.cpp.o: CXX_COMPILER__Q1_Debug /Users/yingshuwang/Desktop/NEU/22Spring/CS5008/HW5/Q1/date.cpp || cmake_object_order_depends_target_Q1
-  DEP_FILE = CMakeFiles/Q1.dir/date.cpp.o.d
+build CMakeFiles/Q1.dir/Person.cpp.o: CXX_COMPILER__Q1_Debug /Users/yingshuwang/Desktop/NEU/22Spring/CS5008/HW5/Q1/Person.cpp || cmake_object_order_depends_target_Q1
+  DEP_FILE = CMakeFiles/Q1.dir/Person.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -std=gnu++14
   OBJECT_DIR = CMakeFiles/Q1.dir
   OBJECT_FILE_DIR = CMakeFiles/Q1.dir
 
-build CMakeFiles/Q1.dir/personType.cpp.o: CXX_COMPILER__Q1_Debug /Users/yingshuwang/Desktop/NEU/22Spring/CS5008/HW5/Q1/personType.cpp || cmake_object_order_depends_target_Q1
-  DEP_FILE = CMakeFiles/Q1.dir/personType.cpp.o.d
+build CMakeFiles/Q1.dir/address.cpp.o: CXX_COMPILER__Q1_Debug /Users/yingshuwang/Desktop/NEU/22Spring/CS5008/HW5/Q1/address.cpp || cmake_object_order_depends_target_Q1
+  DEP_FILE = CMakeFiles/Q1.dir/address.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -std=gnu++14
   OBJECT_DIR = CMakeFiles/Q1.dir
   OBJECT_FILE_DIR = CMakeFiles/Q1.dir
@@ -98,7 +98,7 @@ build CMakeFiles/Q1.dir/personType.cpp.o: CXX_COMPILER__Q1_Debug /Users/yingshuw
 #############################################
 # Link the executable Q1
 
-build Q1: CXX_EXECUTABLE_LINKER__Q1_Debug CMakeFiles/Q1.dir/main.cpp.o CMakeFiles/Q1.dir/date.cpp.o CMakeFiles/Q1.dir/personType.cpp.o
+build Q1: CXX_EXECUTABLE_LINKER__Q1_Debug CMakeFiles/Q1.dir/main.cpp.o CMakeFiles/Q1.dir/Person.cpp.o CMakeFiles/Q1.dir/address.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk
   OBJECT_DIR = CMakeFiles/Q1.dir
   POST_BUILD = :
