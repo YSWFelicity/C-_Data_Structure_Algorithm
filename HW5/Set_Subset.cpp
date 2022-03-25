@@ -4,17 +4,14 @@ using namespace std;
 void combinationUtil(int arr[], int n, int r,
                      int index, int data[], int i);
   
-// The main function that prints all combinations of
-// size r in arr[] of size n. This function mainly
-// uses combinationUtil()
+
 void printCombination(int arr[], int n, int r)
 {
    
-    // A temporary array to store all combination
-    // one by one
+    
     int data[r];
   
-    // Print all combination using temporary array 'data[]'
+    
     combinationUtil(arr, n, r, 0, data, 0);
 }
   
@@ -52,7 +49,7 @@ void combinationUtil(int arr[], int n, int r, int index,
 // Driver program to test above functions
 int main()
 {
-    int arr[] = { 10, 20, 30, 40, 50 };
+    int arr[] = { 20, 24, 28, 32, 36 };
     int r = 3;
     int n = sizeof(arr) / sizeof(arr[0]);
     printCombination(arr, n, r);

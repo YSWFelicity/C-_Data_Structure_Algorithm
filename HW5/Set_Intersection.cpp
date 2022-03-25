@@ -9,8 +9,8 @@ bool comp(int a, int b)
  
 int main()
 {
-    int first[] = { 5, 10, 15, 20, 25 };
-    int second[] = { 50, 40, 30, 20, 10 };
+    int first[] = { 16, 20, 24, 28, 32 };
+    int second[] = { 40, 36, 32, 28, 24 };
     int n = sizeof(first) / sizeof(first[0]);
  
     std::vector<int> v1(5);
