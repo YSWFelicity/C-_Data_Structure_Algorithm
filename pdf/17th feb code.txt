@@ -1,0 +1,222 @@
+#ifndef PERSON_H_INCLUDED
+#define PERSON_H_INCLUDED
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Person
+{
+
+    friend ostream& operator << (ostream&, const Person&);
+	friend istream& operator >> (istream&, Person&);
+
+  public:
+
+    Person();
+    Person(string fn, string mn, string ln);
+    ~Person();
+
+     // setters
+	void setFirstName (string fn);
+	void setMiddleName (string mn);
+	void setLastName (string ln);
+	void setName (string fn, string mn, string ln);
+
+	//getters
+	string getFirstName () const;
+	string getMiddleName () const;
+	string getLastName () const;
+
+	// print
+	void print() const;
+
+
+   private:
+    string firstName;    // data members
+	string middleName;
+	string lastName;
+};
+#endif // PERSON_H_INCLUDED
+#include <iostream>
+#include <string>
+#include "Person.h"
+
+
+using namespace std;
+
+// default constructor
+Person::Person ()    // header file name :: header file function
+{
+	firstName = "Me";
+	middleName = "My";
+	lastName = "Mine";
+}
+
+Person::~Person ()    // destructor
+{
+}
+
+// specific constructor
+Person::Person (string fn, string mn, string ln)
+{
+	firstName = fn;
+	middleName = mn;
+	lastName = ln;
+}
+
+// setters
+void Person::setFirstName (string fn)
+{
+	firstName = fn;
+}
+
+void Person::setMiddleName (string mn)
+{
+	middleName = mn;
+}
+
+void Person::setLastName (string ln)
+{
+	lastName = ln;
+}
+
+void Person::setName (string fn, string mn, string ln)
+{
+	firstName = fn;
+	middleName = mn;
+	lastName = ln;
+}
+
+// getters
+string Person::getFirstName () const
+{
+	return firstName;
+}
+
+string Person::getMiddleName () const
+{
+	return middleName;
+}
+string Person::getLastName () const
+{
+	return lastName;
+}
+
+//print
+void Person::print() const
+{
+	cout << firstName << " "
+		<< middleName << " "
+		<< lastName << " ";
+}
+
+
+// ostream operator
+ostream& operator << (ostream& osObject, const Person& person1)    //creating an instance of a date class, i.e. date1
+{
+	osObject << person1.firstName
+		<< " " << person1.middleName
+		<< " " << person1.lastName;
+
+	return osObject;
+}
+
+istream& operator >> (istream& isObject, Person& person1)
+{
+	isObject >> person1.firstName >> person1.middleName >> person1.lastName;
+
+	return isObject;
+}
+#include <iostream>
+#include <stack>
+#include <vector>
+#include "Person.h"
+#include "Person.cpp"
+
+
+using namespace std;
+
+int main()
+{
+
+    //stack<int> S1;
+   // stack<char> S2;
+   // stack<Person>S3;
+
+    vector<Person>S3;
+    vector<int>S1;
+
+
+    int num;
+   // char sym;
+
+    Person P1;
+    P1.print();
+
+    Person P2("X","Y","Z");
+    Person P3("A","B","C");
+
+    S3.push_back(P1);
+    S3.push_back(P2);
+    S3.push_back(P3);
+
+    // cout << S3.top();
+
+
+        for (int i=0; i<3; i++)
+	{
+
+		cout << S3[i] << endl;
+	}
+
+
+
+    //X1.print();
+
+
+
+
+    cout << endl;
+
+    for( int i=0; i<5 ; i++)
+    {
+        cout<<"Enter an integer value" << endl;
+        cin>> num;
+        S1.push_back(num);
+
+
+    }
+
+     for ( int i=0; i<3; i++)
+	{
+		cout << S1[i] << endl;
+
+	}
+
+
+    /*  while(!S1.empty())
+      {
+          cout<< " " << S1.top();
+          S1.pop();
+
+      }
+
+    while(!S2.empty())
+      {
+          cout<< " " << S2.top();
+          S2.pop();
+
+      }
+
+
+*/
+
+
+    return 0;
+}
+
+
+
+
